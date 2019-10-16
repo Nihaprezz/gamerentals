@@ -1,0 +1,17 @@
+<h1>Rental Details</h1>
+
+<h2><%= link_to @rental.user.name, user_path(@rental.user) %></h2>
+<h2><%= link_to @rental.videogame.title, videogame_path(@rental.videogame) %></h2>
+<h3>Start Date: <%= @rental.start_date_format %></h3>
+<h3>End Date: <%= @rental.end_date_format %></h3>
+<h4>Rental Duration : <%= @rental.calculate_days %> Days</h4>
+
+
+<% if @rental.rental_price > 0 %>
+    <h4>Rental Price: $<%= @rental.price %></h3>
+<% end %> 
+
+<button><%= link_to "Edit Rental", edit_rental_path %></button>
+<button><%= link_to "Show All Rentals", rentals_path %></button>
+
+

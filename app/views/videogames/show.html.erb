@@ -1,0 +1,6 @@
+<h1>Game Title: <%= @videogame.title %></h1>
+<h2>Game ERB Rating: <%= @videogame.erb_rating %></h2>
+
+<button><%= link_to "Edit this Game", edit_videogame_path(@videogame) %></button>
+<button><%= link_to "Return to All Games", videogames_path %></button>
+<button><%= link_to "Delete This Game", videogame_path(@videogame), data: {:confirm => 'Are you sure?'}, :method => :delete %></button>

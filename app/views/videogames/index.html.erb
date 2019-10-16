@@ -1,0 +1,9 @@
+<h1>All Video Games</h1>
+
+<ul>
+<% @videogames.each do |videogame| %>
+    <li><%= link_to videogame.title, videogame_path(videogame) %></li>
+<% end %>
+</ul>
+
+<button><%= link_to "Create New VideoGame", new_videogame_path %></button>

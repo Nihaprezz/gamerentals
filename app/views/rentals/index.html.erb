@@ -1,0 +1,9 @@
+<h1>All Rentals</h1>
+
+<% @rentals.each do |rentals| %>
+    <h2>
+        <%= link_to "#{rentals.user.name} - #{rentals.videogame.title}", rental_path(rentals) %> - <%= rentals.start_date_format %>
+    </h2>
+<% end %>
+
+<button><%= link_to "Return Home", home_path %></button>

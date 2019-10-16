@@ -1,0 +1,20 @@
+<%= form_for @user do |f| %>
+
+<%= f.label :name %><br>
+<%= f.text_field :name %><br>
+<%= f.label :age %><br>
+<%= f.number_field :age %><br>
+
+<h1>Or Create New Video Game</h1><br>
+
+<%= f.fields_for :videogames do |game| %>
+<%= game.label :title %><br>
+<%= game.text_field :title %><br>
+<%= game.label :erb_rating %><br>
+<%= game.text_field :erb_rating %><br>
+
+<% end %>
+
+<br>
+<%= f.submit "Create New User" %>
+<% end %>

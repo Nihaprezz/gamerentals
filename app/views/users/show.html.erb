@@ -1,0 +1,10 @@
+<h1>User Name: <%= @user.name %></h1>
+<h2>User Age: <%= @user.age %></h2>
+
+<ul>
+<% @user.videogames.each do |game| %>
+    <li><%= link_to game.title, videogame_path(game) %></li>
+<% end %>
+</ul>
+
+<button><%=link_to "Edit This User", edit_user_path(@user) %></button>

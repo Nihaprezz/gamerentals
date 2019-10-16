@@ -1,0 +1,16 @@
+<%= form_for @rental do |f| %>
+<%= f.label :start_date %> 
+<%= f.date_field :start_date %> <br><br>
+<%= f.label :end_date %>
+<%= f.date_field :end_date %>
+
+<br><br>
+<label for="videogame">Video Game: </label> 
+<%= f.collection_select :videogame_id, Videogame.all, :id, :title %>
+<br> <br>
+<label for="User">Select User:</label>
+<%= f.collection_select :user_id, User.all, :id, :name %>
+<br> <br>
+<%= f.submit "Create Rental" %>
+<%end %>
+
